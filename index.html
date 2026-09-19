@@ -1,0 +1,76 @@
+<!-- Image resizer UI -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Image Resizer</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="bg" aria-hidden="true"></div>
+
+  <header class="top">
+    <span class="logo"><i></i>Image Resizer</span>
+  </header>
+
+  <main>
+    <h1>Resize any image.<br /><em>One click, locally.</em></h1>
+
+    <section class="card">
+      <div id="dropzone" class="dropzone">
+        <input type="file" id="file" accept="image/*" multiple hidden />
+        <div class="dz-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="36" height="36"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></div>
+        <p><button type="button" id="pick">choose images</button></p>
+      </div>
+
+      <div id="source" class="source hidden">
+        <img id="preview" alt="preview" />
+        <div class="thumbs hidden" id="thumbs"></div>
+        <div class="meta" id="meta"></div>
+        <button type="button" class="ghost" id="change">choose images</button>
+      </div>
+
+      <div class="row">
+        <label>
+          <span>width</span>
+          <input type="number" id="width" min="1" max="99999" placeholder="—" />
+        </label>
+        <span class="times">&times;</span>
+        <label>
+          <span>height</span>
+          <input type="number" id="height" min="1" max="99999" placeholder="—" />
+        </label>
+      </div>
+
+      <div class="options">
+        <label class="switch">
+          <input type="checkbox" id="lock" checked />
+          <i></i>
+          <span>keep aspect ratio</span>
+        </label>
+        <span id="hint" class="hint"></span>
+      </div>
+
+      <label class="pathlabel">
+          <span>save to</span>
+          <input type="text" id="savepath" value="/sdcard/Download" spellcheck="false" autocomplete="off" />
+        </label>
+
+      <button type="button" id="resize" class="primary" disabled>
+        <span>resize</span>
+      </button>
+
+      <div id="status" class="status hidden"></div>
+
+      <div id="result" class="result hidden">
+        <div class="thumbs" id="outthumbs"></div>
+        <p class="meta" id="outmeta"></p>
+      </div>
+    </section>
+
+    </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+id=image-resizer
+name=Image Resizer
+icon=icon.jpg
+description=A tool for Resizing images via ImageMagick.
+author=YasserNull
+version=v1.0.0
+versionCode=1
+repository=https://github.com/null-box-repo/image-resizer
+install=setup.sh
+permission=default

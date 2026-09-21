@@ -5,6 +5,6 @@ description=A tool for Resizing images via ImageMagick.
 author=YasserNull
 version=v1.0.0
 versionCode=1
-repository=https://github.com/null-box-repo/image-resizer
+repository=https://github.com/modules-box-repo/image-resizer
 install=setup.sh
 permission=default
